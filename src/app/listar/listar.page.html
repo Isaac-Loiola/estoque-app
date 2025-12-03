@@ -6,23 +6,24 @@
 
 <ion-content [fullscreen]="true">
   <div class="px ion-display-flex ion-flex-column ion-justify-content-center ion-align-items-center">
-
-      <ion-card class="py w-full">
+    
+      <ion-card *ngFor="let produto of produtos" class="py w-full">
             <div class="p-item">
               <ion-label class="title-label">
-                nome produto!
+                {{produto.nome}}
               </ion-label>
               <div class="ion-display-flex div-label">
-                <ion-label>Quantidade: </ion-label> <ion-label>12</ion-label>
+                <ion-label>Quantidade: </ion-label> 
+                <ion-label>{{produto.quantidade}}</ion-label>
               </div>
 
               <div class="ion-display-flex div-label">
                 <ion-label>Valor: </ion-label> 
-                <ion-label>12</ion-label>
+                <ion-label>{{produto.valor}}</ion-label>
               </div>
               <div class="ion-display-flex div-label">
                 <ion-label>Unitário: </ion-label> 
-                <ion-label>12</ion-label>
+                <ion-label> {{produto.unitario}} </ion-label>
               </div>
             </div>
       </ion-card>

@@ -15,6 +15,20 @@ export class ListarPage implements OnInit {
 
   constructor() { }
 
+  produtos: any[] = [];
+
+  // Evento load
+
+
+  ionViewWillEnter(){
+    this.loadProdutos();
+  }
+
+  loadProdutos() {
+    const data = localStorage.getItem('produtos');
+    this.produtos = data ? JSON.parse(data) : [];
+  }
+
   ngOnInit() {
   }
 
