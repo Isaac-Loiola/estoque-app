@@ -5,7 +5,67 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" color="p">
-  <div class="h-full ion-display-flex">
-    
+  <div class="h-full ion-display-flex ion-justify-content-center ion-align-items-center">
+    <!-- [formGroup]="estoqueform" -->
+    <form >
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Insira o Produto</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+
+            <ion-item class="mb">
+              <ion-label position="stacked">
+                Nome:
+              </ion-label>
+              <ion-input 
+              type="text"
+              placeholder="Digite o nome do produto"
+              >
+              </ion-input>
+            </ion-item>
+
+            <ion-item class="mb">
+              <ion-label position="stacked">
+                Quantidade
+              </ion-label>
+              <ion-input
+              type="number"
+              min="1"
+              placeholder="Digite a quantidade"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item class="mb">
+              <ion-label position="stacked">
+                Valor
+              </ion-label>
+              <ion-input
+              min="1"
+              type="number"
+              placeholder="Digite o valor do produto"
+              >
+              </ion-input>
+            </ion-item>
+            
+            <ion-item class="mb">
+              <ion-label position="stacked">
+                Unitário
+              </ion-label>
+              <ion-input
+              min="1"
+              type="number"
+              placeholder="Digite o valor unitário do produto"
+              ></ion-input>
+            </ion-item>
+            
+            <ion-button color="success" class="w-full">
+              Cadastrar
+            </ion-button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </form>
   </div>
 </ion-content>
