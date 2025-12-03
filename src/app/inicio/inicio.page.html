@@ -6,8 +6,7 @@
 
 <ion-content [fullscreen]="true" color="p">
   <div class="h-full ion-display-flex ion-justify-content-center ion-align-items-center">
-    <!-- [formGroup]="estoqueform" -->
-    <form >
+    <form [formGroup]="produtoForm" >
       <ion-card>
         <ion-card-header>
           <ion-card-title>Insira o Produto</ion-card-title>
@@ -22,6 +21,7 @@
               <ion-input 
               type="text"
               placeholder="Digite o nome do produto"
+              formControlName="nome"
               >
               </ion-input>
             </ion-item>
@@ -34,6 +34,7 @@
               type="number"
               min="1"
               placeholder="Digite a quantidade"
+              formControlName="quantidade"
               ></ion-input>
             </ion-item>
 
@@ -45,6 +46,7 @@
               min="1"
               type="number"
               placeholder="Digite o valor do produto"
+              formControlName="valor"
               >
               </ion-input>
             </ion-item>
@@ -57,6 +59,7 @@
               min="1"
               type="number"
               placeholder="Digite o valor unitário do produto"
+              formControlName="unitario"
               ></ion-input>
             </ion-item>
             
@@ -64,7 +67,8 @@
             color="success" 
             expand="block"
             fill="outline"
-            type="button">
+            type="button"
+            (click)="addProduto()">
               Cadastrar
             </ion-button>
           </ion-list>
