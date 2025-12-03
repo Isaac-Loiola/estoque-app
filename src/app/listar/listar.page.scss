@@ -6,6 +6,9 @@
     width: 100%;
 }
 
+.pt{
+    padding-top: 40px
+}
 .py{
     padding: 10px 0 10px 0;
 }
@@ -24,4 +27,14 @@
 
 ion-title{
     padding-right: 0px;
+}
+
+.title-label{
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.div-label{
+    margin-top: 10px;
 }

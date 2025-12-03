@@ -5,22 +5,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="h-full  px ion-display-flex ion-justify-content-center ion-align-items-center">
+  <div class="px ion-display-flex ion-flex-column ion-justify-content-center ion-align-items-center">
 
-      <ion-card class="pyd w-full">
-
-        <div class="item p-item ion-display-flex ion-flex-column">
-            <ion-title>
-              Nome do produto!
-            </ion-title>
-            <div class=" p-itemion-display-flex">
-              <ion-label>
-                Não há produtos!
+      <ion-card class="py w-full">
+            <div class="p-item">
+              <ion-label class="title-label">
+                nome produto!
               </ion-label>
-            </div>
-        </div>
-        
+              <div class="ion-display-flex div-label">
+                <ion-label>Quantidade: </ion-label> <ion-label>12</ion-label>
+              </div>
 
+              <div class="ion-display-flex div-label">
+                <ion-label>Valor: </ion-label> 
+                <ion-label>12</ion-label>
+              </div>
+              <div class="ion-display-flex div-label">
+                <ion-label>Unitário: </ion-label> 
+                <ion-label>12</ion-label>
+              </div>
+            </div>
       </ion-card>
 
   </div>
