@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
+import { albums, home, layers } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,6 @@ import { addIcons } from 'ionicons';
 })
 export class AppComponent {
   constructor() {
-    addIcons({})
+    addIcons({albums, layers, home})
   }
 }
