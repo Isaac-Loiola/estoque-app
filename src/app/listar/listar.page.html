@@ -1,32 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Listar Estoque</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" class="header">
+  <div class="blur-header w-full h-full">
+    <ion-title class="title-header">Listar Estoque</ion-title>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="tertiary">
   <div class="px ion-display-flex ion-flex-column ion-justify-content-center ion-align-items-center">
     
-      <ion-card *ngFor="let produto of produtos" class="py w-full">
-            <div class="p-item">
-              <ion-label class="title-label">
-                {{produto.nome}}
-              </ion-label>
-              <div class="ion-display-flex div-label">
-                <ion-label>Quantidade: </ion-label> 
-                <ion-label>{{produto.quantidade}}</ion-label>
-              </div>
+      <ion-card *ngFor="let produto of produtos" class="py w-full p-card">
+        <div class="w-full div-list">
+          <ion-icon name="layers" class="icon-list "></ion-icon>
+        </div>
+        <div class="p-item">
+          <ion-label class="title-list font-black semibold">
+            {{produto.nome}}
+          </ion-label>
+          <div class="div-label">
+            <ion-label>Quantidade: </ion-label> 
+            <ion-label  class="font-black semibold">
+              {{produto.quantidade}}
+            </ion-label>
+          </div>
 
-              <div class="ion-display-flex div-label">
-                <ion-label>Valor: </ion-label> 
-                <ion-label>{{produto.valor}}</ion-label>
-              </div>
-              <div class="ion-display-flex div-label">
-                <ion-label>Unitário: </ion-label> 
-                <ion-label> {{produto.unitario}} </ion-label>
-              </div>
-            </div>
+          <div class="div-label ">
+            <ion-label>Valor: </ion-label> 
+            <ion-label class="font-black semibold">
+              {{produto.valor}}
+            </ion-label>
+          </div>
+          <div class="div-label">
+            <ion-label>Unitário: </ion-label> 
+            <ion-label class="font-black semibold"> 
+              {{produto.unitario}} 
+            </ion-label>
+          </div>
+        </div>
+
       </ion-card>
-
   </div>
 </ion-content>
