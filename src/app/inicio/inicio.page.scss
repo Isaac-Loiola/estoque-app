@@ -10,3 +10,34 @@
     margin-bottom: 15px;
 }
 
+.shadow-none{
+    box-shadow: none;
+}
+
+.title{
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.title-item{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+ion-input{
+    --padding-start: 10px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+ion-button{
+    --border-radius: 10px;
+    --box-shadow: none;
+}
+
+.text-button{
+    color: #fff;
+}

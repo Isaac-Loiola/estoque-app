@@ -1,21 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Inicio</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" class="header shadow-none">
+    <ion-title class="title-header">Inicio</ion-title>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="p">
+<ion-content [fullscreen]="true" color="p" color="tertiary">
   <div class="h-full ion-display-flex ion-justify-content-center ion-align-items-center">
     <form [formGroup]="produtoForm" >
       <ion-card>
         <ion-card-header>
-          <ion-card-title>Insira o Produto</ion-card-title>
+          <ion-card-title class="title">Insira o Produto</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-list>
 
-            <ion-item class="mb">
-              <ion-label position="stacked">
+            <ion-item class="mb" color="secondary" lines="none">
+              <ion-label  position="stacked" class="title-item" >
                 Nome:
               </ion-label>
               <ion-input 
@@ -26,8 +23,8 @@
               </ion-input>
             </ion-item>
 
-            <ion-item class="mb">
-              <ion-label position="stacked">
+            <ion-item class="mb" color="secondary" lines="none">
+              <ion-label  position="stacked" class="title-item" >
                 Quantidade
               </ion-label>
               <ion-input
@@ -38,8 +35,8 @@
               ></ion-input>
             </ion-item>
 
-            <ion-item class="mb">
-              <ion-label position="stacked">
+            <ion-item class="mb" color="secondary" lines="none">
+              <ion-label  position="stacked" class="title-item" >
                 Valor
               </ion-label>
               <ion-input
@@ -51,11 +48,11 @@
               </ion-input>
             </ion-item>
             
-            <ion-item class="mb">
-              <ion-label position="stacked">
+            <ion-item class="mb" color="secondary" lines="none">
+              <ion-label  position="stacked" class="title-item" >
                 Unitário
               </ion-label>
-              <ion-input
+              <ion-input class="test"
               min="1"
               type="number"
               placeholder="Digite o valor unitário do produto"
@@ -64,14 +61,12 @@
             </ion-item>
             
             <ion-button 
-            color="success" 
+            color="primary"
             expand="block"
-            fill="outline"
             type="button"
             (click)="addProduto()">
-              Cadastrar
+              <ion-label class="text-button">Cadastrar</ion-label>
             </ion-button>
-          </ion-list>
         </ion-card-content>
       </ion-card>
     </form>
