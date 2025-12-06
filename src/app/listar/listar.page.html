@@ -7,6 +7,20 @@
 <ion-content [fullscreen]="true" color="tertiary">
   <div class="px ion-display-flex ion-flex-column ion-justify-content-center ion-align-items-center">
     
+    <ion-card *ngIf="produtos.length < 1"class="py w-full p-card">
+        <div class="w-full div-list">
+          <ion-icon name="close-circle" class="icon-list "></ion-icon>
+        </div>
+        <div class="p-item">
+          <ion-label class="title-list font-black semibold">
+            Não há Produtos
+          </ion-label>
+          <div class="div-label">
+            <ion-label>Cadastre algum produto!</ion-label> 
+          </div>
+        </div>
+      </ion-card> 
+
       <ion-card *ngFor="let produto of produtos; let i = index" class="py w-full p-card"
       (click)="editarProduto(produto, i)">
         <div class="w-full div-list">
